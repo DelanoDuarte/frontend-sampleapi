@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <div class="container">
+    <div align="center">
+      <img src="assets/images/event-icon.png" width="36" height="36" />
+    </div>
+
+    <div class="col-md-12">
+      <div align="center">
+        <h2>Lista de Eventos Agendados ! </h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<table class="table">
+  <tr>
+    <th></th>
+    <th>Nome</th>
+    <th>Observacoes</th>
+  </tr>
+  <tr *ngFor="let evento of eventos">
+    <td><img src="assets/images/event-icon.png" width="28" height="28" /></td>
+    <td>{{evento.nome}}</td>
+    <td>{{evento.observacoes}}</td>
+  </tr>
+</table>
