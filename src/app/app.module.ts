@@ -7,10 +7,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ListEventosComponent } from './evento/components/list-eventos/list-eventos.component';
 import { NavbarComponent } from 'app/home/components/navbar/navbar.component';
+import { NovoEventoComponent } from './evento/components/novo-evento/novo-evento.component';
+import { FindEventoComponent } from './evento/components/find-evento/find-evento.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
-  { path: 'eventos', component: ListEventosComponent }
+  { path: 'eventos', component: ListEventosComponent },
+  { path: 'eventos/novo', component: NovoEventoComponent },
+  { path: 'eventos/:id', component: FindEventoComponent }
 ];
 
 
@@ -18,7 +22,9 @@ const appRoutes: Routes = [
   declarations: [
     NavbarComponent,
     AppComponent,
-    ListEventosComponent
+    ListEventosComponent,
+    NovoEventoComponent,
+    FindEventoComponent
   ],
   imports: [
     BrowserModule,

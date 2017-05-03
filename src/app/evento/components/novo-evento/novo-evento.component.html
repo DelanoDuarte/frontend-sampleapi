@@ -1,0 +1,43 @@
+<div class="container">
+
+  <div class="jumbotron">
+    <div class="container">
+      <div align="center">
+        <img src="assets/images/event-icon.png" width="36" height="36" />
+      </div>
+
+      <div class="col-md-12">
+        <div align="center">
+          <h2>Cadastrar Novo Evento ! </h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <form (ngSubmit)="saveEvento()">
+    <div class="form-group">
+      <label for="nome">Nome do Evento:</label>
+      <input type="text" class="form-control" [(ngModel)]="evento.nome" id="nome" name="nome">
+    </div>
+    <div class="form-group">
+      <label for="observacoes">Observações do Evento:</label>
+      <input type="text" class="form-control" [(ngModel)]="evento.observacoes" id="observacoes" name="observacoes">
+    </div>
+
+    <div class="form-group">
+      <label for="data">Participantes:</label>
+      <button class="btn btn-primary btn-sm">Adicionar Participantes  </button>
+    </div>
+
+    <br />
+    <br />
+
+    <div align="center">
+      <a class="btn btn-danger btn-md" routerLink="/eventos">Cancelar</a>
+      <button type="submit" class="btn btn-success btn-md">Concluir</button>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+
+  <div class="jumbotron">
+    <div class="container">
+      <div align="center">
+        <img src="assets/images/event-icon.png" width="36" height="36" />
+      </div>
+
+      <div class="col-md-12">
+        <div align="center">
+          <h2>Visualizando Evento ! </h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <form>
+    <div class="form-group">
+      <label for="nome">Nome do Evento:</label>
+      <input type="text" class="form-control" [(ngModel)]="evento.nome" id="nome" name="nome" disabled="true">
+    </div>
+    <div class="form-group">
+      <label for="observacoes">Observações do Evento:</label>
+      <input type="text" class="form-control" [(ngModel)]="evento.observacoes" id="observacoes" name="observacoes" disabled="true">
+    </div>
+
+    <br />
+    <br />
+
+    <div align="center">
+      <a class="btn btn-danger btn-md" routerLink="/eventos">Voltar</a>
+    </div>
+  </form>
+
+</div>

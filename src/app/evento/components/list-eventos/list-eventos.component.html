@@ -1,28 +1,37 @@
-<div class="jumbotron">
-  <div class="container">
-    <div align="center">
-      <img src="assets/images/event-icon.png" width="36" height="36" />
-    </div>
-
-    <div class="col-md-12">
+<div class="container">
+  <div class="jumbotron">
+    <div class="container">
       <div align="center">
-        <h2>Lista de Eventos Agendados ! </h2>
+        <img src="assets/images/event-icon.png" width="36" height="36" />
       </div>
+
+      <div class="col-md-12">
+        <div align="center">
+          <h2>Lista de Eventos Agendados ! </h2>
+        </div>
+      </div>
+
     </div>
-
   </div>
+
+
+  <table class="table">
+    <tr>
+      <th></th>
+      <th>Nome</th>
+      <th>Observacoes</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let evento of eventos">
+      <td><img src="assets/images/event-icon.png" width="28" height="28" /></td>
+      <td>{{evento.nome}}</td>
+      <td>{{evento.observacoes}}</td>
+      <td><a class="btn btn-success btn-sm" [routerLink]="['/eventos/', evento.id]">Ver Evento</a></td>
+    </tr>
+  </table>
+
+  <div>
+    <a class="btn btn-primary btn-md" routerLink="/eventos/novo">Novo Evento</a>
+  </div>
+
 </div>
-
-
-<table class="table">
-  <tr>
-    <th></th>
-    <th>Nome</th>
-    <th>Observacoes</th>
-  </tr>
-  <tr *ngFor="let evento of eventos">
-    <td><img src="assets/images/event-icon.png" width="28" height="28" /></td>
-    <td>{{evento.nome}}</td>
-    <td>{{evento.observacoes}}</td>
-  </tr>
-</table>
